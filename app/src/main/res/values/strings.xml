@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RK Shop</string>
+    <string name="welcome">Welcome to RK Shop</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="add_new_item">Add New Item</string>
+    <string name="product_image">Product Image</string>
+    <string name="please_fill_fields">Please fill in all fields</string>
+    <string name="login_successful">Login successful</string>
+    <string name="login_failed">Invalid credentials</string>
+    <string name="registration_successful">Registration successful</string>
+    <string name="user_exists">User already exists</string>
+    <string name="password_length">Password must be at least 6 characters</string>
+    <string name="welcome_user">Welcome, %1$s</string>
+    <string name="selected_item">Selected: %1$s</string>
+    <string name="add_item_clicked">Add new item clicked</string>
+</resources>
