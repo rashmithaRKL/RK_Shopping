@@ -1,21 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- App Name and General -->
     <string name="app_name">RK Shop</string>
     <string name="welcome">Welcome to RK Shop</string>
+    
+    <!-- Authentication -->
     <string name="login">Login</string>
     <string name="register">Register</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
-    <string name="add_to_cart">Add to Cart</string>
-    <string name="add_new_item">Add New Item</string>
-    <string name="product_image">Product Image</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="sign_out">Sign Out</string>
+    
+    <!-- Authentication Messages -->
     <string name="please_fill_fields">Please fill in all fields</string>
     <string name="login_successful">Login successful</string>
     <string name="login_failed">Invalid credentials</string>
     <string name="registration_successful">Registration successful</string>
     <string name="user_exists">User already exists</string>
     <string name="password_length">Password must be at least 6 characters</string>
+    <string name="passwords_not_match">Passwords do not match</string>
     <string name="welcome_user">Welcome, %1$s</string>
+    
+    <!-- Shop Items -->
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="remove_from_cart">Remove from Cart</string>
+    <string name="add_new_item">Add New Item</string>
+    <string name="product_image">Product Image</string>
     <string name="selected_item">Selected: %1$s</string>
     <string name="add_item_clicked">Add new item clicked</string>
+    <string name="price">Price: $%1$.2f</string>
+    <string name="quantity">Quantity: %1$d</string>
+    <string name="total">Total: $%1$.2f</string>
+    
+    <!-- Navigation -->
+    <string name="home">Home</string>
+    <string name="cart">Cart</string>
+    <string name="profile">Profile</string>
+    <string name="settings">Settings</string>
+    <string name="map">Map</string>
+    
+    <!-- Permissions -->
+    <string name="permission_camera_rationale">Camera permission is needed to take pictures</string>
+    <string name="permission_location_rationale">Location permission is needed to show your position on the map</string>
+    <string name="permission_storage_rationale">Storage permission is needed to save files</string>
+    <string name="permission_phone_rationale">Phone permission is needed to make calls</string>
+    <string name="permission_granted">Permission granted</string>
+    <string name="permission_denied">Permission denied</string>
+    
+    <!-- Notifications -->
+    <string name="notification_channel_name">RK Shop Notifications</string>
+    <string name="notification_channel_description">Receive updates about your orders and offers</string>
+    <string name="new_message_notification_title">New Message</string>
+    <string name="order_status_notification_title">Order Status Update</string>
+    
+    <!-- Error Messages -->
+    <string name="error_network">Network error. Please check your connection</string>
+    <string name="error_unknown">An unknown error occurred</string>
+    <string name="error_loading">Error loading data</string>
+    <string name="error_saving">Error saving data</string>
+    
+    <!-- Settings -->
+    <string name="setting_notifications">Enable Notifications</string>
+    <string name="setting_dark_mode">Dark Mode</string>
+    <string name="setting_language">Language</string>
+    <string name="setting_about">About</string>
+    
+    <!-- Media -->
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="record_video">Record Video</string>
+    <string name="record_audio">Record Audio</string>
+    
+    <!-- Map -->
+    <string name="my_location">My Location</string>
+    <string name="search_location">Search Location</string>
+    <string name="directions">Get Directions</string>
+    
+    <!-- Sensors -->
+    <string name="accelerometer">Accelerometer</string>
+    <string name="gyroscope">Gyroscope</string>
+    <string name="proximity">Proximity</string>
+    <string name="light">Light</string>
+    
+    <!-- Actions -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="share">Share</string>
+    <string name="search">Search</string>
+    <string name="refresh">Refresh</string>
+    <string name="retry">Retry</string>
 </resources>
