@@ -8,31 +8,31 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to the Home Screen"
+        android:text="Manage Address"
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/buttonViewProducts"
+    <EditText
+        android:id="@+id/editTextAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Products" />
+        android:hint="Address" />
+
+    <EditText
+        android:id="@+id/editTextCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="City" />
+
+    <EditText
+        android:id="@+id/editTextZipCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Zip Code" />
 
     <Button
-        android:id="@+id/buttonViewWishlist"
+        android:id="@+id/buttonSaveAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Wishlist" />
-
-    <Button
-        android:id="@+id/buttonViewCart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View Cart" />
-
-    <Button
-        android:id="@+id/buttonProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Profile" />
+        android:text="Save Address" />
 </LinearLayout>

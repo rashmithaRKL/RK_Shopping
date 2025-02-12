@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/loginActivity">
+
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.rk_shop.LoginActivity"
+        tools:layout="@layout/activity_login" />
+
+    <activity
+        android:id="@+id/signUpActivity"
+        android:name="com.example.rk_shop.SignUpActivity"
+        tools:layout="@layout/activity_sign_up" />
+
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.rk_shop.HomeActivity"
+        tools:layout="@layout/activity_home" />
+
+    <activity
+        android:id="@+id/productDetailActivity"
+        android:name="com.example.rk_shop.ProductDetailActivity"
+        tools:layout="@layout/activity_product_detail" />
+
+    <activity
+        android:id="@+id/wishlistActivity"
+        android:name="com.example.rk_shop.WishlistActivity"
+        tools:layout="@layout/activity_wishlist" />
+
+    <activity
+        android:id="@+id/cartActivity"
+        android:name="com.example.rk_shop.CartActivity"
+        tools:layout="@layout/activity_cart" />
+
+    <activity
+        android:id="@+id/profileActivity"
+        android:name="com.example.rk_shop.ProfileActivity"
+        tools:layout="@layout/activity_profile" />
+
+    <activity
+        android:id="@+id/searchActivity"
+        android:name="com.example.rk_shop.SearchActivity"
+        tools:layout="@layout/activity_search" />
+
+    <activity
+        android:id="@+id/categoryActivity"
+        android:name="com.example.rk_shop.CategoryActivity"
+        tools:layout="@layout/activity_category" />
+
+    <activity
+        android:id="@+id/editProfileActivity"
+        android:name="com.example.rk_shop.EditProfileActivity"
+        tools:layout="@layout/activity_edit_profile" />
+
+    <activity
+        android:id="@+id/manageAddressActivity"
+        android:name="com.example.rk_shop.ManageAddressActivity"
+        tools:layout="@layout/activity_manage_address" />
+
+    <activity
+        android:id="@+id/paymentMethodActivity"
+        android:name="com.example.rk_shop.PaymentMethodActivity"
+        tools:layout="@layout/activity_payment_method" />
+
+    <activity
+        android:id="@+id/myOrdersActivity"
+        android:name="com.example.rk_shop.MyOrdersActivity"
+        tools:layout="@layout/activity_my_orders" />
+
+    <activity
+        android:id="@+id/myCouponsActivity"
+        android:name="com.example.rk_shop.MyCouponsActivity"
+        tools:layout="@layout/activity_my_coupons" />
+
+    <activity
+        android:id="@+id/notificationsActivity"
+        android:name="com.example.rk_shop.NotificationsActivity"
+        tools:layout="@layout/activity_notifications" />
+
+    <activity
+        android:id="@+id/settingsActivity"
+        android:name="com.example.rk_shop.SettingsActivity"
+        tools:layout="@layout/activity_settings" />
+
+    <activity
+        android:id="@+id/mapActivity"
+        android:name="com.example.rk_shop.MapActivity"
+        tools:layout="@layout/activity_map" />
+</navigation>

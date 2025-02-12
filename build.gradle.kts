@@ -8,5 +8,5 @@ plugins {
 }
 
 tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
+    delete(project.buildDir) // Updated line to resolve deprecation warning
 }

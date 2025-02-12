@@ -8,31 +8,26 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome to the Home Screen"
+        android:text="Your Cart"
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/buttonViewProducts"
+    <RecyclerView
+        android:id="@+id/recyclerViewCart"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textViewTotalPrice"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="View Products" />
+        android:text="Total Price: $0.00"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <Button
-        android:id="@+id/buttonViewWishlist"
+        android:id="@+id/buttonCheckout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="View Wishlist" />
-
-    <Button
-        android:id="@+id/buttonViewCart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="View Cart" />
-
-    <Button
-        android:id="@+id/buttonProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Profile" />
+        android:text="Proceed to Checkout" />
 </LinearLayout>
