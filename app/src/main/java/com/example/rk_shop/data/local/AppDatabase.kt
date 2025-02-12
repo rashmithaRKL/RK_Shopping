@@ -81,4 +81,27 @@ class Converters {
     fun toBigDecimal(bigDecimal: java.math.BigDecimal): String {
         return bigDecimal.toString()
     }
+
+    @androidx.room.TypeConverter
+    fun fromReviewList(value: String): List<com.example.rk_shop.data.model.Review> {
+        if (value.isEmpty()) return emptyList()
+        return value.split("|").map { reviewStr ->
+            val parts = reviewStr.split("~")
+            com.example.rk_shop.data.model.Review(
+                id = parts[0],
+                userId = parts[1],
+                userName = parts[2],
+                rating = parts[3].toFloat(),
+                comment = parts[4],
+                createdAt = parts[5]
+            )
+        }
+    }
+
+    @androidx.room.TypeConverter
+    fun toReviewList(reviews: List<com.example.rk_shop.data.model.Review>): String {
+        return reviews.joinToString("|") { review ->
+            "${review.id}~${review.userId}~${review.userName}~${review.rating}~${review.comment}~${review.createdAt}"
+        }
+    }
 }

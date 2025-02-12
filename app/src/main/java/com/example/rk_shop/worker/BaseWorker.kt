@@ -13,10 +13,9 @@ import dagger.assisted.AssistedInject
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-@HiltWorker
-abstract class BaseWorker @AssistedInject constructor(
-    @Assisted context: Context,
-    @Assisted params: WorkerParameters,
+abstract class BaseWorker constructor(
+    context: Context,
+    params: WorkerParameters,
     protected val apiService: ApiService,
     protected val userRepository: UserRepository,
     protected val shopItemRepository: ShopItemRepository
