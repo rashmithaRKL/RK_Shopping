@@ -6,6 +6,7 @@ import com.google.gson.annotations.SerializedName
 import java.math.BigDecimal
 
 @Entity(tableName = "shop_items")
+@androidx.room.TypeConverters(com.example.rk_shop.data.local.Converters::class)
 data class ShopItem(
     @PrimaryKey
     @SerializedName("id")
@@ -51,6 +52,7 @@ data class ShopItem(
     val updatedAt: String
 )
 
+@androidx.room.TypeConverters(Converters::class)
 data class Review(
     @SerializedName("id")
     val id: String,

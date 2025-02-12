@@ -39,69 +39,9 @@ abstract class AppDatabase : RoomDatabase() {
                 AppDatabase::class.java,
                 DATABASE_NAME
             )
+            .addTypeConverter(Converters())
             .fallbackToDestructiveMigration()
             .build()
-        }
-    }
-}
-
-// Type converters for Room
-@androidx.room.TypeConverters
-class Converters {
-    @androidx.room.TypeConverter
-    fun fromString(value: String): List<String> {
-        return value.split(",").map { it.trim() }
-    }
-
-    @androidx.room.TypeConverter
-    fun toString(list: List<String>): String {
-        return list.joinToString(",")
-    }
-
-    @androidx.room.TypeConverter
-    fun fromStringMap(value: String): Map<String, String> {
-        if (value.isEmpty()) return emptyMap()
-        return value.split(",").associate {
-            val (key, value) = it.split(":")
-            key to value
-        }
-    }
-
-    @androidx.room.TypeConverter
-    fun toStringMap(map: Map<String, String>): String {
-        return map.entries.joinToString(",") { "${it.key}:${it.value}" }
-    }
-
-    @androidx.room.TypeConverter
-    fun fromBigDecimal(value: String): java.math.BigDecimal {
-        return java.math.BigDecimal(value)
-    }
-
-    @androidx.room.TypeConverter
-    fun toBigDecimal(bigDecimal: java.math.BigDecimal): String {
-        return bigDecimal.toString()
-    }
-
-    @androidx.room.TypeConverter
-    fun fromReviewList(value: String): List<com.example.rk_shop.data.model.Review> {
-        if (value.isEmpty()) return emptyList()
-        return value.split("|").map { reviewStr ->
-            val parts = reviewStr.split("~")
-            com.example.rk_shop.data.model.Review(
-                id = parts[0],
-                userId = parts[1],
-                userName = parts[2],
-                rating = parts[3].toFloat(),
-                comment = parts[4],
-                createdAt = parts[5]
-            )
-        }
-    }
-
-    @androidx.room.TypeConverter
-    fun toReviewList(reviews: List<com.example.rk_shop.data.model.Review>): String {
-        return reviews.joinToString("|") { review ->
-            "${review.id}~${review.userId}~${review.userName}~${review.rating}~${review.comment}~${review.createdAt}"
         }
     }
 }
