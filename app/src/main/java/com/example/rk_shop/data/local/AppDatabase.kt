@@ -6,42 +6,32 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.example.rk_shop.data.model.ShopItem
-import com.example.rk_shop.data.model.User
 
 @Database(
-    entities = [
-        User::class,
-        ShopItem::class
-    ],
+    entities = [ShopItem::class],
     version = 1,
     exportSchema = false
 )
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun userDao(): UserDao
     abstract fun shopItemDao(): ShopItemDao
 
     companion object {
-        private const val DATABASE_NAME = "rk_shop_db"
-
         @Volatile
-        private var instance: AppDatabase? = null
+        private var INSTANCE: AppDatabase? = null
 
         fun getInstance(context: Context): AppDatabase {
-            return instance ?: synchronized(this) {
-                instance ?: buildDatabase(context).also { instance = it }
+            return INSTANCE ?: synchronized(this) {
+                val instance = Room.databaseBuilder(
+                    context.applicationContext,
+                    AppDatabase::class.java,
+                    "rk_shop_database"
+                )
+                .fallbackToDestructiveMigration()
+                .build()
+                INSTANCE = instance
+                instance
             }
-        }
-
-        private fun buildDatabase(context: Context): AppDatabase {
-            return Room.databaseBuilder(
-                context.applicationContext,
-                AppDatabase::class.java,
-                DATABASE_NAME
-            )
-            .addTypeConverter(Converters())
-            .fallbackToDestructiveMigration()
-            .build()
         }
     }
 }
