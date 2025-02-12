@@ -35,6 +35,7 @@ android {
     buildFeatures {
         viewBinding = true
         dataBinding = true
+        buildConfig = true // Added line to resolve deprecation warning
     }
 
     compileOptions {
