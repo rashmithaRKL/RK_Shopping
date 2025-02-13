@@ -1,27 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<paths xmlns:android="http://schemas.android.com/apk/res-auto">
-    <!-- Cache directory paths -->
-    <cache-path
-        name="cache"
-        path="." />
-    
-    <!-- Internal app files directory paths -->
-    <files-path
-        name="files"
-        path="." />
-    
-    <!-- External cache directory paths -->
-    <external-cache-path
-        name="external_cache"
-        path="." />
-    
-    <!-- External files directory paths -->
-    <external-files-path
-        name="external_files"
-        path="." />
-    
-    <!-- External storage root directory paths -->
-    <external-path
-        name="external"
-        path="." />
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path name="external_files" path="." />
 </paths>

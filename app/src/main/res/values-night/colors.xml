@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Material Design 3 Dark Theme Colors -->
+    <color name="md_theme_dark_primary">#9ECAFF</color>
+    <color name="md_theme_dark_onPrimary">#003258</color>
+    <color name="md_theme_dark_primaryContainer">#004880</color>
+    <color name="md_theme_dark_onPrimaryContainer">#D1E4FF</color>
+    
+    <color name="md_theme_dark_secondary">#B7C8DA</color>
+    <color name="md_theme_dark_onSecondary">#22323F</color>
+    <color name="md_theme_dark_secondaryContainer">#384956</color>
+    <color name="md_theme_dark_onSecondaryContainer">#D3E4F7</color>
+    
+    <color name="md_theme_dark_tertiary">#D6BEE4</color>
+    <color name="md_theme_dark_onTertiary">#3B2948</color>
+    <color name="md_theme_dark_tertiaryContainer">#533F5F</color>
+    <color name="md_theme_dark_onTertiaryContainer">#F2DAFF</color>
+    
+    <color name="md_theme_dark_error">#FFB4AB</color>
+    <color name="md_theme_dark_errorContainer">#93000A</color>
+    <color name="md_theme_dark_onError">#690005</color>
+    <color name="md_theme_dark_onErrorContainer">#FFDAD6</color>
+    
+    <color name="md_theme_dark_background">#1A1C1E</color>
+    <color name="md_theme_dark_onBackground">#E2E2E6</color>
+    
+    <color name="md_theme_dark_surface">#1A1C1E</color>
+    <color name="md_theme_dark_onSurface">#E2E2E6</color>
+    <color name="md_theme_dark_surfaceVariant">#42474E</color>
+    <color name="md_theme_dark_onSurfaceVariant">#C2C7CF</color>
+    
+    <color name="md_theme_dark_outline">#8C9199</color>
+    <color name="md_theme_dark_inverseOnSurface">#1A1C1E</color>
+    <color name="md_theme_dark_inverseSurface">#E2E2E6</color>
+    <color name="md_theme_dark_inversePrimary">#006397</color>
+    
+    <color name="md_theme_dark_shadow">#000000</color>
+    <color name="md_theme_dark_surfaceTint">#9ECAFF</color>
+    <color name="md_theme_dark_outlineVariant">#42474E</color>
+    <color name="md_theme_dark_scrim">#000000</color>
+    
+    <!-- Custom Dark Theme Colors -->
+    <color name="dark_background">#121212</color>
+    <color name="dark_surface">#1E1E1E</color>
+    <color name="dark_error">#CF6679</color>
+    
+    <!-- Text Colors Dark -->
+    <color name="text_primary_dark">#FFFFFF</color>
+    <color name="text_secondary_dark">#B3FFFFFF</color>
+    <color name="text_hint_dark">#80FFFFFF</color>
+    
+    <!-- Rating Colors Dark -->
+    <color name="rating_active_dark">#FFD700</color>
+    <color name="rating_inactive_dark">#666666</color>
+    
+    <!-- Price Colors Dark -->
+    <color name="price_regular_dark">#FFFFFF</color>
+    <color name="price_sale_dark">#FF8A80</color>
+    <color name="price_discount_dark">#69F0AE</color>
+    
+    <!-- Button Colors Dark -->
+    <color name="button_primary_dark">@color/md_theme_dark_primary</color>
+    <color name="button_secondary_dark">@color/md_theme_dark_secondary</color>
+    <color name="button_disabled_dark">#666666</color>
+    
+    <!-- Divider Colors Dark -->
+    <color name="divider_dark">#1FFFFFFF</color>
+    
+    <!-- Shimmer Colors Dark -->
+    <color name="shimmer_placeholder_color_dark">#424242</color>
+    <color name="shimmer_highlight_dark">#616161</color>
+    
+    <!-- Ripple Colors Dark -->
+    <color name="ripple_dark">#33FFFFFF</color>
+</resources>

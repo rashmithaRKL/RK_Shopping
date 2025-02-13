@@ -8,6 +8,13 @@ plugins {
     id("com.google.gms.google-services")
 }
 
+// Add JitPack repository
+repositories {
+    google()
+    mavenCentral()
+    maven { url = uri("https://jitpack.io") }
+}
+
 android {
     namespace = "com.example.rk_shop"
     compileSdk = 34
@@ -35,7 +42,7 @@ android {
     buildFeatures {
         viewBinding = true
         dataBinding = true
-        buildConfig = true // Ensure this line is present
+        buildConfig = true
     }
 
     compileOptions {
@@ -62,10 +69,26 @@ dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 
     // Core Android Dependencies
-    implementation("androidx.core:core-ktx:1.15.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.2.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.2.0-alpha13")
+    
+    // Animation & UI Enhancement Libraries
+    implementation("com.airbnb.android:lottie:6.1.0")
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
+    implementation("io.coil-kt:coil:2.5.0")
+    implementation("io.coil-kt:coil-gif:2.5.0")
+    
+    // AR Core for Product Visualization
+    implementation("com.google.ar:core:1.40.0")
+    implementation("com.google.ar.sceneform:core:1.17.1")
+    
+    // Advanced UI Components
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+    kapt("com.github.bumptech.glide:compiler:4.16.0")
+    implementation("com.github.chrisbanes:PhotoView:2.3.0")
+    implementation("com.github.razir.progressbutton:progressbutton:2.1.0")
     
     // Firebase
     implementation(platform("com.google.firebase:firebase-bom:33.9.0"))
@@ -107,10 +130,6 @@ dependencies {
     // Google Maps & Location
     implementation("com.google.android.gms:play-services-maps:19.0.0")
     implementation("com.google.android.gms:play-services-location:21.3.0")
-
-    // Image Loading
-    implementation("com.github.bumptech.glide:glide:4.16.0")
-    kapt("com.github.bumptech.glide:compiler:4.16.0")
 
     // WorkManager
     implementation("androidx.work:work-runtime-ktx:2.10.0")

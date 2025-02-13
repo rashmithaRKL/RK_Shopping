@@ -1,72 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base application theme -->
-    <style name="Theme.RKShop" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <!-- Primary brand colors -->
-        <item name="colorPrimary">@color/primary</item>
-        <item name="colorPrimaryVariant">@color/primary_variant</item>
-        <item name="colorOnPrimary">@color/on_primary</item>
+    <style name="Theme.RKShopping" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_onPrimaryContainer</item>
         
-        <!-- Secondary brand colors -->
-        <item name="colorSecondary">@color/secondary</item>
-        <item name="colorSecondaryVariant">@color/secondary_variant</item>
-        <item name="colorOnSecondary">@color/on_secondary</item>
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/md_theme_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_onSecondaryContainer</item>
         
-        <!-- Status bar color -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Status bar and Navigation bar -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
         
-        <!-- Background colors -->
-        <item name="android:colorBackground">@color/background</item>
-        <item name="colorSurface">@color/surface</item>
-        <item name="colorError">@color/error</item>
-        <item name="colorOnBackground">@color/on_background</item>
-        <item name="colorOnSurface">@color/on_surface</item>
-        <item name="colorOnError">@color/on_error</item>
-
-        <!-- Text appearances -->
-        <item name="textAppearanceHeadline1">@style/TextAppearance.RKShop.Headline1</item>
-        <item name="textAppearanceHeadline2">@style/TextAppearance.RKShop.Headline2</item>
-        <item name="textAppearanceBody1">@style/TextAppearance.RKShop.Body1</item>
-        <item name="textAppearanceBody2">@style/TextAppearance.RKShop.Body2</item>
+        <!-- Window background -->
+        <item name="android:windowBackground">@color/background</item>
         
         <!-- Shape appearances -->
-        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.RKShop.SmallComponent</item>
-        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.RKShop.MediumComponent</item>
-        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.RKShop.LargeComponent</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.RKShopping.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.RKShopping.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.RKShopping.LargeComponent</item>
+        
+        <!-- Custom component styles -->
+        <item name="quantitySelectorStyle">@style/Widget.RKShopping.QuantitySelector</item>
+        <item name="productCardStyle">@style/Widget.RKShopping.ProductCard</item>
+        <item name="loadingViewStyle">@style/Widget.RKShopping.LoadingView</item>
+        
+        <!-- Material Components styles -->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.RKShopping.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.RKShopping.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.RKShopping.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.RKShopping.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.RKShopping.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.RKShopping.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.RKShopping.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.RKShopping.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.RKShopping.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.RKShopping.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.RKShopping.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.RKShopping.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.RKShopping.Overline</item>
     </style>
 
-    <!-- Text Styles -->
-    <style name="TextAppearance.RKShop.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
-        <item name="android:textSize">24sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="TextAppearance.RKShop.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
-        <item name="android:textSize">20sp</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="TextAppearance.RKShop.Body1" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="android:textSize">16sp</item>
-    </style>
-
-    <style name="TextAppearance.RKShop.Body2" parent="TextAppearance.MaterialComponents.Body2">
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <!-- Shape Styles -->
-    <style name="ShapeAppearance.RKShop.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
-        <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">4dp</item>
-    </style>
-
-    <style name="ShapeAppearance.RKShop.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+    <!-- Shape Appearances -->
+    <style name="ShapeAppearance.RKShopping.SmallComponent" parent="ShapeAppearance.Material3.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">8dp</item>
     </style>
 
-    <style name="ShapeAppearance.RKShop.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+    <style name="ShapeAppearance.RKShopping.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeAppearance.RKShopping.LargeComponent" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Custom Component Styles -->
+    <style name="Widget.RKShopping.QuantitySelector" parent="">
+        <item name="quantitySelectorBackground">@color/surface</item>
+        <item name="quantitySelectorTextColor">@color/text_primary</item>
+        <item name="quantitySelectorButtonTint">@color/primary</item>
+        <item name="quantitySelectorStrokeColor">@color/light_gray</item>
+        <item name="quantitySelectorStrokeWidth">1dp</item>
+    </style>
+
+    <style name="Widget.RKShopping.ProductCard" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="titleTextAppearance">?attr/textAppearanceSubtitle1</item>
+        <item name="priceTextAppearance">?attr/textAppearanceHeadline6</item>
+        <item name="ratingTextAppearance">?attr/textAppearanceBody2</item>
+    </style>
+
+    <style name="Widget.RKShopping.LoadingView" parent="">
+        <item name="loadingSize">56dp</item>
+        <item name="loadingColor">?attr/colorPrimary</item>
+        <item name="loadingBackgroundColor">@android:color/transparent</item>
+    </style>
+
+    <!-- Text Appearances -->
+    <style name="TextAppearance.RKShopping.Headline1" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="android:textSize">96sp</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Headline2" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textSize">60sp</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Headline3" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:textSize">48sp</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Headline4" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:textSize">34sp</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Headline5" parent="TextAppearance.Material3.TitleMedium">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Headline6" parent="TextAppearance.Material3.TitleSmall">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Subtitle1" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Subtitle2" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Body1" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Body2" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Button" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Caption" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Overline" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 </resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.RKShopping" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color -->
+        <item name="colorPrimary">@color/md_theme_dark_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_dark_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_dark_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_dark_onPrimaryContainer</item>
+        
+        <!-- Secondary brand color -->
+        <item name="colorSecondary">@color/md_theme_dark_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_dark_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_dark_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/md_theme_dark_onSecondaryContainer</item>
+        
+        <!-- Surface colors -->
+        <item name="colorSurface">@color/md_theme_dark_surface</item>
+        <item name="colorOnSurface">@color/md_theme_dark_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_dark_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_dark_onSurfaceVariant</item>
+        
+        <!-- Status bar and Navigation bar -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        
+        <!-- Window background -->
+        <item name="android:windowBackground">@color/md_theme_dark_background</item>
+        
+        <!-- Custom component styles -->
+        <item name="quantitySelectorStyle">@style/Widget.RKShopping.QuantitySelector.Dark</item>
+        <item name="productCardStyle">@style/Widget.RKShopping.ProductCard.Dark</item>
+        <item name="loadingViewStyle">@style/Widget.RKShopping.LoadingView.Dark</item>
+    </style>
+
+    <!-- Dark theme custom component styles -->
+    <style name="Widget.RKShopping.QuantitySelector.Dark" parent="Widget.RKShopping.QuantitySelector">
+        <item name="quantitySelectorBackground">@color/md_theme_dark_surface</item>
+        <item name="quantitySelectorTextColor">@color/md_theme_dark_onSurface</item>
+        <item name="quantitySelectorButtonTint">@color/md_theme_dark_primary</item>
+        <item name="quantitySelectorStrokeColor">@color/md_theme_dark_outline</item>
+    </style>
+
+    <style name="Widget.RKShopping.ProductCard.Dark" parent="Widget.RKShopping.ProductCard">
+        <item name="cardBackgroundColor">@color/md_theme_dark_surface</item>
+        <item name="rippleColor">@color/ripple_dark</item>
+        <item name="strokeColor">@color/md_theme_dark_outline</item>
+    </style>
+
+    <style name="Widget.RKShopping.LoadingView.Dark" parent="Widget.RKShopping.LoadingView">
+        <item name="loadingColor">@color/md_theme_dark_primary</item>
+        <item name="loadingBackgroundColor">@color/md_theme_dark_surface</item>
+    </style>
+
+    <!-- Dark theme text appearances -->
+    <style name="TextAppearance.RKShopping.Headline1.Dark" parent="TextAppearance.RKShopping.Headline1">
+        <item name="android:textColor">@color/md_theme_dark_onSurface</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Headline2.Dark" parent="TextAppearance.RKShopping.Headline2">
+        <item name="android:textColor">@color/md_theme_dark_onSurface</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Headline3.Dark" parent="TextAppearance.RKShopping.Headline3">
+        <item name="android:textColor">@color/md_theme_dark_onSurface</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Headline4.Dark" parent="TextAppearance.RKShopping.Headline4">
+        <item name="android:textColor">@color/md_theme_dark_onSurface</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Headline5.Dark" parent="TextAppearance.RKShopping.Headline5">
+        <item name="android:textColor">@color/md_theme_dark_onSurface</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Headline6.Dark" parent="TextAppearance.RKShopping.Headline6">
+        <item name="android:textColor">@color/md_theme_dark_onSurface</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Subtitle1.Dark" parent="TextAppearance.RKShopping.Subtitle1">
+        <item name="android:textColor">@color/md_theme_dark_onSurfaceVariant</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Subtitle2.Dark" parent="TextAppearance.RKShopping.Subtitle2">
+        <item name="android:textColor">@color/md_theme_dark_onSurfaceVariant</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Body1.Dark" parent="TextAppearance.RKShopping.Body1">
+        <item name="android:textColor">@color/md_theme_dark_onSurfaceVariant</item>
+    </style>
+
+    <style name="TextAppearance.RKShopping.Body2.Dark" parent="TextAppearance.RKShopping.Body2">
+        <item name="android:textColor">@color/md_theme_dark_onSurfaceVariant</item>
+    </style>
+</resources>
