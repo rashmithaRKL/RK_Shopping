@@ -38,6 +38,19 @@ app/
 │           └── drawable/
 ```
 
+## Screenshots
+
+Here are some sample screenshots of the application:
+
+![Product Listing](path/to/screenshot_product_listing.png)
+*Product Listing Screen*
+
+![Product Detail](path/to/screenshot_product_detail.png)
+*Product Detail Screen*
+
+![Cart](path/to/screenshot_cart.png)
+*Shopping Cart Screen*
+
 ## Setup Instructions
 
 1. Clone the repository

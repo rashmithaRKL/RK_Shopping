@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Base Colors -->
-    <color name="primary">#FF2196F3</color>
-    <color name="primary_dark">#1976D2</color>
-    <color name="primary_light">#BBDEFB</color>
+    <color name="primary">#d53c1b</color>
+    <color name="primary_dark">#a32a1a</color>
+    <color name="primary_light">#ff6f61</color>
     <color name="accent">#FF4081</color>
     
     <!-- Material Design 3 Colors -->
-    <color name="md_theme_primary">#006495</color>
+    <color name="md_theme_primary">#d53c1b</color>
     <color name="md_theme_onPrimary">#FFFFFF</color>
-    <color name="md_theme_primaryContainer">#CCE5FF</color>
-    <color name="md_theme_onPrimaryContainer">#001E30</color>
+    <color name="md_theme_primaryContainer">#FFB2A1</color>
+    <color name="md_theme_onPrimaryContainer">#3A0000</color>
     <color name="md_theme_secondary">#50606F</color>
     <color name="md_theme_onSecondary">#FFFFFF</color>
     <color name="md_theme_secondaryContainer">#D3E5F5</color>
