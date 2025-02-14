@@ -1,78 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Custom attributes for QuantitySelector -->
+    <!-- QuantitySelector Attributes -->
     <declare-styleable name="QuantitySelector">
-        <attr name="quantitySelectorBackground" format="reference|color" />
-        <attr name="quantitySelectorTextColor" format="color" />
-        <attr name="quantitySelectorButtonTint" format="color" />
-        <attr name="quantitySelectorMinValue" format="integer" />
-        <attr name="quantitySelectorMaxValue" format="integer" />
-        <attr name="quantitySelectorDefaultValue" format="integer" />
-        <attr name="quantitySelectorStrokeColor" format="color" />
+        <attr name="quantitySelectorBackground" format="color|reference" />
+        <attr name="quantitySelectorTextColor" format="color|reference" />
+        <attr name="quantitySelectorButtonTint" format="color|reference" />
+        <attr name="quantitySelectorStrokeColor" format="color|reference" />
         <attr name="quantitySelectorStrokeWidth" format="dimension" />
     </declare-styleable>
+    <attr name="quantitySelectorStyle" format="reference" />
 
-    <!-- Custom attributes for AnimatedProductCardView -->
-    <declare-styleable name="AnimatedProductCardView">
-        <attr name="cardElevation" format="dimension" />
-        <attr name="cardCornerRadius" format="dimension" />
-        <attr name="cardBackgroundColor" format="color" />
+    <!-- ProductCard Attributes -->
+    <declare-styleable name="ProductCard">
         <attr name="titleTextAppearance" format="reference" />
         <attr name="priceTextAppearance" format="reference" />
         <attr name="ratingTextAppearance" format="reference" />
-        <attr name="buttonStyle" format="reference" />
     </declare-styleable>
+    <attr name="productCardStyle" format="reference" />
 
-    <!-- Custom attributes for LoadingView -->
+    <!-- LoadingView Attributes -->
     <declare-styleable name="LoadingView">
         <attr name="loadingSize" format="dimension" />
-        <attr name="loadingColor" format="color" />
-        <attr name="loadingBackgroundColor" format="color" />
-        <attr name="loadingAnimation" format="reference" />
+        <attr name="loadingColor" format="color|reference" />
+        <attr name="loadingBackgroundColor" format="color|reference" />
     </declare-styleable>
-
-    <!-- Custom attributes for ShimmerLayout -->
-    <declare-styleable name="ShimmerLayout">
-        <attr name="shimmerColor" format="color" />
-        <attr name="shimmerDuration" format="integer" />
-        <attr name="shimmerAngle" format="float" />
-        <attr name="shimmerMaskWidth" format="float" />
-        <attr name="autoStart" format="boolean" />
-    </declare-styleable>
-
-    <!-- Custom attributes for AnimatedActionButton -->
-    <declare-styleable name="AnimatedActionButton">
-        <attr name="progressColor" format="color" />
-        <attr name="successColor" format="color" />
-        <attr name="progressStrokeWidth" format="dimension" />
-        <attr name="animationDuration" format="integer" />
-        <attr name="progressAnimationDuration" format="integer" />
-        <attr name="successAnimationDuration" format="integer" />
-        <attr name="resetAnimationDuration" format="integer" />
-        <attr name="loadingAlpha" format="float" />
-        <attr name="successScale" format="float" />
-        <attr name="animateToCircle" format="boolean" />
-        <attr name="showSuccessState" format="boolean" />
-    </declare-styleable>
-
-    <!-- Material Design Theme Attributes -->
-    <attr name="colorSurface" format="color" />
-    <attr name="colorOnSurface" format="color" />
-    <attr name="colorPrimaryContainer" format="color" />
-    <attr name="colorOnPrimaryContainer" format="color" />
-    <attr name="colorSecondaryContainer" format="color" />
-    <attr name="colorOnSecondaryContainer" format="color" />
-    <attr name="colorTertiaryContainer" format="color" />
-    <attr name="colorOnTertiaryContainer" format="color" />
-    <attr name="colorError" format="color" />
-    <attr name="colorOnError" format="color" />
-    <attr name="colorErrorContainer" format="color" />
-    <attr name="colorOnErrorContainer" format="color" />
-    <attr name="colorOutline" format="color" />
-    <attr name="colorOutlineVariant" format="color" />
-    
-    <!-- Shape Appearances -->
-    <attr name="shapeAppearanceSmallComponent" format="reference" />
-    <attr name="shapeAppearanceMediumComponent" format="reference" />
-    <attr name="shapeAppearanceLargeComponent" format="reference" />
+    <attr name="loadingViewStyle" format="reference" />
 </resources>
