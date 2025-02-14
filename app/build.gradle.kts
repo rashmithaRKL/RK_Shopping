@@ -10,12 +10,12 @@ plugins {
 
 android {
     namespace = "com.example.rk_shop"
-    compileSdk = 34
+    compileSdk = 33
 
     defaultConfig {
         applicationId = "com.example.rk_shop"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
         
