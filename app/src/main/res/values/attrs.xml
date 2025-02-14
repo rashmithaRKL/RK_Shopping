@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- AnimatedActionButton Attributes -->
+    <declare-styleable name="AnimatedActionButton">
+        <attr name="progressColor" format="color|reference" />
+        <attr name="successColor" format="color|reference" />
+        <attr name="progressStrokeWidth" format="dimension" />
+        <attr name="animationDuration" format="integer" />
+        <attr name="loadingAlpha" format="float" />
+        <attr name="successScale" format="float" />
+        <attr name="animateToCircle" format="boolean" />
+        <attr name="showSuccessState" format="boolean" />
+    </declare-styleable>
+
     <!-- QuantitySelector Attributes -->
     <declare-styleable name="QuantitySelector">
         <attr name="quantitySelectorBackground" format="color|reference" />
@@ -25,4 +37,13 @@
         <attr name="loadingBackgroundColor" format="color|reference" />
     </declare-styleable>
     <attr name="loadingViewStyle" format="reference" />
+
+    <!-- ShimmerLayout Attributes -->
+    <declare-styleable name="ShimmerLayout">
+        <attr name="shimmerColor" format="color|reference" />
+        <attr name="shimmerDuration" format="integer" />
+        <attr name="shimmerAngle" format="float" />
+        <attr name="shimmerMaskWidth" format="float" />
+        <attr name="autoStart" format="boolean" />
+    </declare-styleable>
 </resources>
