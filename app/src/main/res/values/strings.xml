@@ -1,80 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">RK Shopping</string>
+    <string name="app_name">RK Shop</string>
     
-    <!-- Product Card -->
+    <!-- Welcome -->
+    <string name="welcome">Welcome to RK Shop</string>
+    
+    <!-- Quantity Selector -->
+    <string name="decrease_quantity">Decrease quantity</string>
+    <string name="increase_quantity">Increase quantity</string>
+    <string name="quantity_value">%d</string>
+    
+    <!-- Product Details -->
     <string name="add_to_cart">Add to Cart</string>
-    <string name="added_to_cart">Added to Cart</string>
-    <string name="remove_from_cart">Remove from Cart</string>
-    <string name="add_to_favorites">Add to Favorites</string>
-    <string name="remove_from_favorites">Remove from Favorites</string>
-    <string name="product_image">Product Image</string>
-    <string name="product_rating">Rating: %1$.1f</string>
-    <string name="currency_format">$%1$.2f</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="product_description">Product Description</string>
+    <string name="product_specifications">Specifications</string>
+    <string name="product_reviews">Reviews</string>
     
-    <!-- Navigation -->
-    <string name="nav_home">Home</string>
-    <string name="nav_categories">Categories</string>
-    <string name="nav_cart">Cart</string>
-    <string name="nav_profile">Profile</string>
-    <string name="nav_wishlist">Wishlist</string>
-    
-    <!-- Actions -->
-    <string name="action_search">Search</string>
-    <string name="action_filter">Filter</string>
-    <string name="action_sort">Sort</string>
-    <string name="action_share">Share</string>
-    
-    <!-- Messages -->
-    <string name="msg_added_to_cart">Item added to cart</string>
-    <string name="msg_removed_from_cart">Item removed from cart</string>
-    <string name="msg_added_to_wishlist">Added to wishlist</string>
-    <string name="msg_removed_from_wishlist">Removed from wishlist</string>
-    <string name="msg_error_loading">Error loading data</string>
-    <string name="msg_retry">Retry</string>
-    
-    <!-- Loading States -->
-    <string name="loading">Loading…</string>
-    <string name="please_wait">Please wait…</string>
-    
-    <!-- Error Messages -->
-    <string name="error_network">Network error. Please check your connection.</string>
-    <string name="error_generic">Something went wrong. Please try again.</string>
-    <string name="error_empty_cart">Your cart is empty</string>
-    <string name="error_empty_wishlist">Your wishlist is empty</string>
-    
-    <!-- Authentication -->
-    <string name="login">Login</string>
-    <string name="register">Register</string>
-    <string name="logout">Logout</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="confirm_password">Confirm Password</string>
-    <string name="forgot_password">Forgot Password?</string>
-    
-    <!-- Profile -->
-    <string name="profile_edit">Edit Profile</string>
-    <string name="profile_orders">My Orders</string>
-    <string name="profile_addresses">My Addresses</string>
-    <string name="profile_settings">Settings</string>
-    
-    <!-- Checkout -->
+    <!-- Cart -->
+    <string name="cart">Cart</string>
     <string name="checkout">Checkout</string>
-    <string name="subtotal">Subtotal</string>
-    <string name="shipping">Shipping</string>
-    <string name="tax">Tax</string>
     <string name="total">Total</string>
-    <string name="place_order">Place Order</string>
     
-    <!-- Address -->
-    <string name="address_add">Add Address</string>
-    <string name="address_edit">Edit Address</string>
-    <string name="address_delete">Delete Address</string>
-    <string name="address_default">Set as Default</string>
-    
-    <!-- Payment -->
-    <string name="payment_method">Payment Method</string>
-    <string name="payment_add">Add Payment Method</string>
-    <string name="payment_edit">Edit Payment Method</string>
-    <string name="payment_delete">Delete Payment Method</string>
+    <!-- Common -->
+    <string name="loading">Loading…</string>
+    <string name="retry">Retry</string>
+    <string name="error">Error</string>
 </resources>
