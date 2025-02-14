@@ -65,30 +65,6 @@
         <item name="cornerSize">16dp</item>
     </style>
 
-    <!-- Custom Component Styles -->
-    <style name="Widget.RKShopping.QuantitySelector" parent="">
-        <item name="quantitySelectorBackground">@color/surface</item>
-        <item name="quantitySelectorTextColor">@color/text_primary</item>
-        <item name="quantitySelectorButtonTint">@color/primary</item>
-        <item name="quantitySelectorStrokeColor">@color/light_gray</item>
-        <item name="quantitySelectorStrokeWidth">1dp</item>
-    </style>
-
-    <style name="Widget.RKShopping.ProductCard" parent="Widget.Material3.CardView.Elevated">
-        <item name="cardElevation">4dp</item>
-        <item name="cardCornerRadius">12dp</item>
-        <item name="cardBackgroundColor">@color/surface</item>
-        <item name="titleTextAppearance">?attr/textAppearanceSubtitle1</item>
-        <item name="priceTextAppearance">?attr/textAppearanceHeadline6</item>
-        <item name="ratingTextAppearance">?attr/textAppearanceBody2</item>
-    </style>
-
-    <style name="Widget.RKShopping.LoadingView" parent="">
-        <item name="loadingSize">56dp</item>
-        <item name="loadingColor">?attr/colorPrimary</item>
-        <item name="loadingBackgroundColor">@android:color/transparent</item>
-    </style>
-
     <!-- Text Appearances -->
     <style name="TextAppearance.RKShopping.Headline1" parent="TextAppearance.Material3.HeadlineLarge">
         <item name="android:textSize">96sp</item>
