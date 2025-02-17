@@ -24,6 +24,61 @@ A full-featured Android e-commerce application built with Kotlin and Java, demon
 - **Networking**: Retrofit for API communication
 - **Build System**: Gradle with Kotlin DSL
 
+## Prerequisites
+
+1. Android Studio Arctic Fox or newer
+2. Android SDK 21 or higher
+3. Gradle 8.0 or higher
+4. JDK 17
+
+## Setup Instructions
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/rashmithaRKL/RK_Shopping.git
+   ```
+
+2. Android SDK Configuration:
+   - Install Android SDK through Android Studio or download it separately
+   - Create a `local.properties` file in the project root directory
+   - Add your Android SDK path to `local.properties`:
+     ```properties
+     sdk.dir=/path/to/your/Android/Sdk
+     ```
+   Note: Replace `/path/to/your/Android/Sdk` with your actual Android SDK path:
+   - Windows: `C:\\Users\\YourUsername\\AppData\\Local\\Android\\Sdk`
+   - macOS: `/Users/YourUsername/Library/Android/sdk`
+   - Linux: `/home/YourUsername/Android/Sdk`
+
+3. Open the project in Android Studio:
+   - Open Android Studio
+   - Select "Open an Existing Project"
+   - Navigate to the cloned repository and select it
+
+4. Sync Project:
+   - Wait for the Gradle sync to complete
+   - Resolve any dependency issues if prompted
+
+5. Build the project:
+   ```bash
+   ./gradlew build
+   ```
+
+6. Run the application:
+   - Select a target device (emulator or physical device)
+   - Click the "Run" button in Android Studio
+
+## Database Setup
+
+The application uses Room database for local storage with the following entities:
+- Users
+- Shop Items
+- Reviews
+- Orders
+- Cart Items
+
+The database is automatically initialized when the application starts.
+
 ## Project Structure
 
 ```
@@ -44,52 +99,14 @@ app/
 │           └── drawable/
 ```
 
-## Setup Instructions
+## Building from Command Line
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/rashmithaRKL/RK_Shopping.git
-   ```
-
-2. Configure Android SDK:
-   - Copy `local.properties.template` to `local.properties`
-   - Update the SDK path in `local.properties` to point to your Android SDK installation:
-     ```properties
-     sdk.dir=/path/to/your/Android/Sdk
-     ndk.dir=/path/to/your/Android/Sdk/ndk-bundle
-     ```
-
-3. Open the project in Android Studio
-
-4. Sync project with Gradle files
-
-5. Run the application on an emulator or physical device
-
-## Database Setup
-
-The application uses Room database for local storage. The following entities are defined:
-- Users
-- Shop Items
-- Reviews
-- Orders
-- Cart Items
-
-The database is automatically initialized when the application starts.
-
-## Requirements
-
-- Android Studio Arctic Fox or newer
-- Android SDK 21 or higher
-- Gradle 8.0 or higher
-
-## Building and Running
-
-To build the project:
+To build the debug APK:
 ```bash
 ./gradlew assembleDebug
 ```
 
-To install on a connected device:
+To install the APK on a connected device:
 ```bash
 ./gradlew installDebug
 ```
@@ -101,6 +118,18 @@ To install on a connected device:
 3. Commit your changes
 4. Push to the branch
 5. Create a Pull Request
+
+## Troubleshooting
+
+1. SDK Location Error:
+   - Ensure `local.properties` exists in the project root
+   - Verify the SDK path in `local.properties` is correct
+   - Make sure the SDK is installed at the specified location
+
+2. Build Errors:
+   - Run `./gradlew clean` and try building again
+   - Sync project with Gradle files
+   - Invalidate caches and restart Android Studio
 
 ## License
 
