@@ -3,13 +3,13 @@
     <!-- Text Appearances -->
     <style name="TextAppearance.RKShopping.Headline1" parent="TextAppearance.MaterialComponents.Headline1">
         <item name="android:textSize">96sp</item>
-        <item name="android:textStyle">light</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:letterSpacing">-0.015625</item>
     </style>
 
     <style name="TextAppearance.RKShopping.Headline2" parent="TextAppearance.MaterialComponents.Headline2">
         <item name="android:textSize">60sp</item>
-        <item name="android:textStyle">light</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:letterSpacing">-0.00833333333</item>
     </style>
 
