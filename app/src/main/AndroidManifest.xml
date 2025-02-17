@@ -29,6 +29,11 @@
             </intent-filter>
         </activity>
 
+        <!-- New Test Database Activity -->
+        <activity
+            android:name=".TestDatabaseActivity"
+            android:exported="true" />
+
         <!-- Firebase Cloud Messaging Service -->
         <service
             android:name=".service.FCMService"

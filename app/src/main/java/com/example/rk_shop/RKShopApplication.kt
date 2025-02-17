@@ -7,7 +7,11 @@ import com.example.rk_shop.util.ThemeManager
 import com.google.android.material.color.DynamicColors
 import com.google.android.material.color.MaterialColors
 
+import com.example.rk_shop.data.local.AppDatabase
+
 class RKShopApplication : Application() {
+    lateinit var database: AppDatabase
+
 
     override fun onCreate() {
         super.onCreate()
