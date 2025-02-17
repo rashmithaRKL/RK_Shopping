@@ -7,4 +7,28 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Status Colors -->
+    <color name="success">#4CAF50</color>
+    <color name="error">#F44336</color>
+    <color name="warning">#FFC107</color>
+    <color name="info">#2196F3</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#DE000000</color>
+    <color name="text_secondary">#99000000</color>
+    <color name="text_disabled">#61000000</color>
+
+    <!-- Background Colors -->
+    <color name="background">#FFFFFF</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="card">#FFFFFF</color>
+
+    <!-- Divider Colors -->
+    <color name="divider">#1F000000</color>
+
+    <!-- Brand Colors -->
+    <color name="brand_primary">#FF6200EE</color>
+    <color name="brand_secondary">#FF03DAC5</color>
+    <color name="brand_accent">#FF3700B3</color>
 </resources>
