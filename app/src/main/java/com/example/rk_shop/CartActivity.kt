@@ -18,7 +18,8 @@ class CartActivity : AppCompatActivity() {
         buttonCheckout = findViewById(R.id.buttonCheckout)
 
         buttonCheckout.setOnClickListener {
-            // Handle checkout logic
+        // Handle checkout logic
+        proceedToCheckout()
         }
 
         // Load cart items and calculate total price

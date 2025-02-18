@@ -27,7 +27,23 @@ class SignUpFragment : BaseFragment<ActivitySignUpBinding>() {
     private fun setupViews() {
         // Setup signup button
         binding.btnSignUp.setOnClickListener {
-            // Perform signup
+        // Perform signup
+        val email = binding.editTextEmail.text.toString()
+        val password = binding.editTextPassword.text.toString()
+
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(requireContext(), "Email and Password cannot be empty", Toast.LENGTH_SHORT).show()
+            return@setOnClickListener
+        }
+
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+        // On successful signup, navigate to home
+                } else {
+                    Toast.makeText(requireContext(), "Registration failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
             // On successful signup:
             findNavController().navigate(R.id.action_signup_to_home)
         }

@@ -28,6 +28,7 @@ class CartFragment : BaseFragment<ActivityCartBinding>() {
             // Setup checkout button
             btnCheckout.setOnClickListener {
                 // Navigate to payment/checkout flow
+                findNavController().navigate(R.id.action_cartFragment_to_checkoutFragment)
             }
 
             // Setup continue shopping button
@@ -38,6 +39,7 @@ class CartFragment : BaseFragment<ActivityCartBinding>() {
             // Setup clear cart button
             btnClearCart.setOnClickListener {
                 // Clear cart logic
+                clearCart()
             }
 
             // Setup back button
