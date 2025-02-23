@@ -18,5 +18,12 @@ dependencyResolutionManagement {
 
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
+gradle.beforeProject {
+    extra.apply {
+        set("android.nonTransitiveRClass", true)
+        set("android.nonFinalResIds", false)
+    }
+}
+
 rootProject.name = "RK_Shopping"
 include(":app")

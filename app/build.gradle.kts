@@ -17,6 +17,9 @@ android {
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        
+        // Resource configurations
+        resourceConfigurations += listOf("en")
     }
 
     buildTypes {
@@ -58,7 +61,12 @@ android {
     androidResources {
         additionalParameters += listOf("--warn-manifest-validation")
         noCompress += listOf("json")
+        generateLocaleConfig = false
     }
+
+    // Disable resource namespacing
+    android.nonTransitiveRClass = true
+    android.nonFinalResIds = false
 
     packaging {
         resources {
