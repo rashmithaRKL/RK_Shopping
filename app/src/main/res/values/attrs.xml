@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Common Attributes -->
+    <attr name="progressColor" format="color" />
+    <attr name="successColor" format="color" />
+    <attr name="animationDuration" format="integer" />
+    <attr name="loadingColor" format="color" />
+    <attr name="loadingBackgroundColor" format="color" />
+
     <!-- Shimmer Attributes -->
     <declare-styleable name="ShimmerLayout">
         <attr name="shimmer_highlight_color" format="color" />
@@ -30,12 +37,12 @@
         <attr name="successScale" format="float" />
         <attr name="animateToCircle" format="boolean" />
         <attr name="showSuccessState" format="boolean" />
-        <attr name="loadingColor" format="color" />
-        <attr name="loadingBackgroundColor" format="color" />
-        <attr name="progressColor" format="color" />
-        <attr name="successColor" format="color" />
+        <attr name="loadingColor" />
+        <attr name="loadingBackgroundColor" />
+        <attr name="progressColor" />
+        <attr name="successColor" />
         <attr name="progressStrokeWidth" format="dimension" />
-        <attr name="animationDuration" format="integer" />
+        <attr name="animationDuration" />
     </declare-styleable>
 
     <!-- Product Card Attributes -->
@@ -45,18 +52,9 @@
 
     <!-- Custom Loading View Attributes -->
     <declare-styleable name="CustomLoadingView">
-        <attr name="progressColor" format="color" />
-        <attr name="successColor" format="color" />
+        <attr name="progressColor" />
+        <attr name="successColor" />
         <attr name="progressStrokeWidth" format="dimension" />
-        <attr name="animationDuration" format="integer" />
+        <attr name="animationDuration" />
     </declare-styleable>
-
-    <!-- Custom Styles -->
-    <attr name="quantitySelectorStyle" format="reference" />
-    <attr name="productCardStyle" format="reference" />
-    <attr name="loadingViewStyle" format="reference" />
-    <attr name="progressColor" format="color" />
-    <attr name="successColor" format="color" />
-    <attr name="progressStrokeWidth" format="dimension" />
-    <attr name="animationDuration" format="integer" />
 </resources>

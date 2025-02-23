@@ -1,103 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- AnimatedActionButton Styles -->
-    <style name="Widget.RKShopping.AnimatedActionButton" parent="Widget.Material3.Button">
-        <item name="android:minHeight">@dimen/button_height</item>
-        <item name="android:minWidth">@dimen/button_min_width</item>
-        <item name="cornerRadius">@dimen/button_corner_radius</item>
-        <item name="android:padding">@dimen/button_padding</item>
-        <item name="iconPadding">@dimen/button_icon_padding</item>
-        <item name="progressColor">?attr/colorPrimary</item>
-        <item name="successColor">@color/success</item>
-        <item name="progressStrokeWidth">@dimen/progress_stroke_width</item>
-        <item name="animationDuration">500</item>
-        <item name="loadingAlpha">0.7</item>
-        <item name="successScale">1.1</item>
-        <item name="animateToCircle">true</item>
-        <item name="showSuccessState">true</item>
+    <!-- Base application theme -->
+    <style name="Theme.RKShopping" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/accent</item>
     </style>
 
-    <!-- QuantitySelector Styles -->
+    <!-- Quantity Selector Style -->
     <style name="Widget.RKShopping.QuantitySelector" parent="">
-        <item name="android:layout_width">@dimen/quantity_selector_width</item>
-        <item name="android:layout_height">@dimen/quantity_selector_height</item>
-        <item name="quantitySelectorBackground">?attr/colorSurface</item>
-        <item name="quantitySelectorTextColor">?attr/colorOnSurface</item>
-        <item name="quantitySelectorButtonTint">?attr/colorPrimary</item>
-        <item name="quantitySelectorStrokeColor">?attr/colorOutlineVariant</item>
+        <item name="quantitySelectorBackground">@color/white</item>
+        <item name="quantitySelectorTextColor">@color/black</item>
+        <item name="quantitySelectorButtonTint">@color/primary</item>
+        <item name="quantitySelectorStrokeColor">@color/gray</item>
         <item name="quantitySelectorStrokeWidth">1dp</item>
     </style>
 
-    <!-- LoadingView Styles -->
-    <style name="Widget.RKShopping.LoadingView" parent="">
-        <item name="android:layout_width">@dimen/loading_indicator_size</item>
-        <item name="android:layout_height">@dimen/loading_indicator_size</item>
-        <item name="loadingColor">?attr/colorPrimary</item>
-        <item name="loadingBackgroundColor">@android:color/transparent</item>
+    <!-- Product Card Style -->
+    <style name="Widget.RKShopping.ProductCard" parent="Widget.MaterialComponents.CardView">
+        <item name="cardElevation">4dp</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="android:layout_margin">8dp</item>
     </style>
 
-    <!-- ShimmerLayout Styles -->
-    <style name="Widget.RKShopping.ShimmerLayout" parent="">
-        <item name="shimmerColor">?attr/colorSurfaceVariant</item>
+    <!-- Loading View Style -->
+    <style name="Widget.RKShopping.LoadingView" parent="">
+        <item name="loadingColor">@color/loading_color</item>
+        <item name="loadingBackgroundColor">@color/loading_background_color</item>
+        <item name="loadingAlpha">0.8</item>
+        <item name="successScale">0.75</item>
+        <item name="animateToCircle">true</item>
+        <item name="showSuccessState">true</item>
+        <item name="progressColor">@color/progress_color</item>
+        <item name="successColor">@color/success</item>
+        <item name="progressStrokeWidth">4dp</item>
+        <item name="animationDuration">300</item>
+    </style>
+
+    <!-- Shimmer Style -->
+    <style name="Widget.RKShopping.Shimmer" parent="">
+        <item name="shimmerColor">@color/shimmer_placeholder_color</item>
         <item name="shimmerDuration">1000</item>
         <item name="shimmerAngle">20</item>
         <item name="shimmerMaskWidth">0.5</item>
         <item name="autoStart">true</item>
-    </style>
-
-    <!-- Product Card Styles -->
-    <style name="Widget.RKShopping.ProductCard" parent="Widget.Material3.CardView.Elevated">
-        <item name="cardElevation">@dimen/card_elevation</item>
-        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
-        <item name="cardBackgroundColor">?attr/colorSurface</item>
-        <item name="contentPadding">@dimen/card_content_padding</item>
-        <item name="rippleColor">?attr/colorPrimaryContainer</item>
-        <item name="strokeColor">?attr/colorOutlineVariant</item>
-        <item name="strokeWidth">1dp</item>
-    </style>
-
-    <!-- Text Styles -->
-    <style name="TextAppearance.RKShopping.ProductTitle" parent="TextAppearance.Material3.TitleLarge">
-        <item name="android:textSize">@dimen/text_title</item>
-        <item name="android:textColor">?attr/colorOnSurface</item>
-        <item name="android:maxLines">2</item>
-        <item name="android:ellipsize">end</item>
-    </style>
-
-    <style name="TextAppearance.RKShopping.ProductPrice" parent="TextAppearance.Material3.HeadlineMedium">
-        <item name="android:textSize">@dimen/text_headline</item>
-        <item name="android:textColor">?attr/colorPrimary</item>
-        <item name="android:textStyle">bold</item>
-    </style>
-
-    <style name="TextAppearance.RKShopping.ProductDescription" parent="TextAppearance.Material3.BodyMedium">
-        <item name="android:textSize">@dimen/text_body</item>
-        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
-        <item name="android:lineSpacingMultiplier">1.2</item>
-    </style>
-
-    <!-- Button Styles -->
-    <style name="Widget.RKShopping.Button.Primary" parent="Widget.Material3.Button">
-        <item name="android:minHeight">@dimen/button_height</item>
-        <item name="cornerRadius">@dimen/button_corner_radius</item>
-        <item name="android:textAppearance">?attr/textAppearanceButton</item>
-        <item name="android:letterSpacing">0.01</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
-
-    <style name="Widget.RKShopping.Button.Secondary" parent="Widget.Material3.Button.TonalButton">
-        <item name="android:minHeight">@dimen/button_height</item>
-        <item name="cornerRadius">@dimen/button_corner_radius</item>
-        <item name="android:textAppearance">?attr/textAppearanceButton</item>
-        <item name="android:letterSpacing">0.01</item>
-        <item name="android:textAllCaps">false</item>
-    </style>
-
-    <!-- Icon Button Styles -->
-    <style name="Widget.RKShopping.Button.Icon" parent="Widget.Material3.Button.IconButton">
-        <item name="iconTint">?attr/colorOnSurfaceVariant</item>
-        <item name="rippleColor">?attr/colorPrimaryContainer</item>
-        <item name="android:minWidth">48dp</item>
-        <item name="android:minHeight">48dp</item>
     </style>
 </resources>
