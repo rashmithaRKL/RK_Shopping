@@ -60,17 +60,6 @@ android {
         noCompress += listOf("json")
     }
 
-    // Disable resource namespacing
-    aaptOptions {
-        namespaced = false
-        noCompress += listOf("json")
-        additionalParameters += listOf(
-            "--no-version-vectors",
-            "--no-version-transitions",
-            "--auto-add-overlay"
-        )
-    }
-
     packaging {
         resources {
             excludes += listOf(
@@ -85,19 +74,6 @@ android {
                 "META-INF/*.kotlin_module"
             )
             pickFirsts += listOf("META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version")
-        }
-    }
-}
-
-configurations.all {
-    resolutionStrategy {
-        force("androidx.core:core-ktx:1.12.0")
-        force("androidx.appcompat:appcompat:1.6.1")
-        force("com.facebook.shimmer:shimmer:0.5.0")
-        eachDependency {
-            if (requested.group == "com.android.support") {
-                useVersion("28.0.0")
-            }
         }
     }
 }
@@ -158,13 +134,8 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
     kapt("com.github.bumptech.glide:compiler:4.16.0")
 
-    // Shimmer Effect
-    implementation("com.facebook.shimmer:shimmer:0.5.0") {
-        exclude(group = "com.android.support", module = "support-annotations")
-        exclude(group = "com.android.support", module = "support-v4")
-        exclude(group = "com.android.support", module = "support-compat")
-        exclude(group = "com.android.support", module = "support-core-utils")
-    }
+    // Shimmer Effect - using AndroidX version
+    implementation("com.facebook.shimmer:shimmer:0.1.0@aar")
 
     // Lottie Animation
     implementation("com.airbnb.android:lottie:6.3.0")
