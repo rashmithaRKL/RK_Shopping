@@ -6,6 +6,7 @@
     <attr name="animationDuration" format="integer" />
     <attr name="loadingColor" format="color" />
     <attr name="loadingBackgroundColor" format="color" />
+    <attr name="progressStrokeWidth" format="dimension" />
 
     <!-- Shimmer Attributes -->
     <declare-styleable name="ShimmerLayout">
@@ -41,7 +42,7 @@
         <attr name="loadingBackgroundColor" />
         <attr name="progressColor" />
         <attr name="successColor" />
-        <attr name="progressStrokeWidth" format="dimension" />
+        <attr name="progressStrokeWidth" />
         <attr name="animationDuration" />
     </declare-styleable>
 
@@ -54,7 +55,7 @@
     <declare-styleable name="CustomLoadingView">
         <attr name="progressColor" />
         <attr name="successColor" />
-        <attr name="progressStrokeWidth" format="dimension" />
+        <attr name="progressStrokeWidth" />
         <attr name="animationDuration" />
     </declare-styleable>
 </resources>
