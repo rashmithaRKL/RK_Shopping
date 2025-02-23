@@ -13,12 +13,16 @@
     <color name="primaryDark">#FF3700B3</color>
     <color name="accent">#FF03DAC5</color>
     <color name="gray">#757575</color>
+    <color name="light_gray">#E0E0E0</color>
+    <color name="error">#B00020</color>
     <color name="price_regular">#212121</color>
     <color name="shimmer_placeholder_color">#DDDDDD</color>
     <color name="success">#4CAF50</color>
     <color name="progress_color">#2196F3</color>
     <color name="loading_color">#E0E0E0</color>
     <color name="loading_background_color">#FFFFFF</color>
+    <color name="rating_active">#FFC107</color>
+    <color name="rating_inactive">#D6D6D6</color>
 
     <!-- Material Design 3 Light Theme Colors -->
     <color name="md_theme_light_primary">#6750A4</color>

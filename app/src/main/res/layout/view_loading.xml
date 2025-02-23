@@ -9,8 +9,9 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        app:lottie_autoPlay="false"
+        app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/loading_animation" />
+        app:lottie_rawRes="@raw/loading_animation"
+        app:lottie_speed="1.0" />
 
 </merge>
