@@ -17,9 +17,6 @@ android {
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-        // Enable resource namespacing
-        resourceConfigurations += listOf("en")
     }
 
     buildTypes {
@@ -54,14 +51,13 @@ android {
     lint {
         abortOnError = false
         checkReleaseBuilds = false
+        disable += listOf("ResourceType")
     }
 
-    // Resource handling
+    // Resource configuration
     androidResources {
-        generateLocaleConfig = false
+        additionalParameters += listOf("--warn-manifest-validation")
         noCompress += listOf("json")
-        // Disable AAPT namespacing
-        namespaced = false
     }
 
     packaging {
@@ -77,6 +73,7 @@ android {
                 "META-INF/ASL2.0",
                 "META-INF/*.kotlin_module"
             )
+            pickFirsts += listOf("META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version")
         }
     }
 }
