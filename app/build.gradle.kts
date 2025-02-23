@@ -134,8 +134,8 @@ dependencies {
     implementation("com.github.bumptech.glide:glide:4.16.0")
     kapt("com.github.bumptech.glide:compiler:4.16.0")
 
-    // Shimmer Effect - using AndroidX version
-    implementation("com.facebook.shimmer:shimmer:0.1.0@aar")
+    // Shimmer Effect - using JitPack version
+    implementation("com.github.facebook:shimmer-android:0.5.0")
 
     // Lottie Animation
     implementation("com.airbnb.android:lottie:6.3.0")
