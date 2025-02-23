@@ -23,10 +23,16 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = false
+            isShrinkResources = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug") // Use debug signing for now
+        }
+        debug {
+            isMinifyEnabled = false
+            applicationIdSuffix = ".debug"
         }
     }
     
@@ -42,6 +48,12 @@ android {
     buildFeatures {
         viewBinding = true
         buildConfig = true
+    }
+
+    // Ensure proper resource handling
+    androidResources {
+        generateLocaleConfig = true
+        noCompress += listOf("json")
     }
 }
 
