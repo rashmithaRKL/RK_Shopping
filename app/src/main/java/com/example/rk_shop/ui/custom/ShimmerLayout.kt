@@ -17,6 +17,7 @@ class ShimmerLayout @JvmOverloads constructor(
     private val shimmerFrameLayout: ShimmerFrameLayout
 
     init {
+        // Inflate the layout
         val view = LayoutInflater.from(context).inflate(R.layout.layout_shimmer, this, true)
         shimmerFrameLayout = view.findViewById(R.id.shimmerFrameLayout)
 
@@ -30,35 +31,44 @@ class ShimmerLayout @JvmOverloads constructor(
             )
 
             try {
-                // Apply custom shimmer attributes
+                // Get custom attributes
                 val shimmerColor = typedArray.getColor(
                     R.styleable.ShimmerLayout_shimmerColor,
-                    shimmerFrameLayout.highlightColor
+                    context.getColor(android.R.color.white)
                 )
                 val shimmerDuration = typedArray.getInteger(
                     R.styleable.ShimmerLayout_shimmerDuration,
-                    shimmerFrameLayout.duration.toInt()
+                    1000
                 )
                 val shimmerAngle = typedArray.getInteger(
                     R.styleable.ShimmerLayout_shimmerAngle,
-                    shimmerFrameLayout.angle
+                    0
                 )
 
-                // Apply the attributes to the ShimmerFrameLayout
-                shimmerFrameLayout.setHighlightColor(shimmerColor)
-                shimmerFrameLayout.duration = shimmerDuration.toLong()
-                shimmerFrameLayout.angle = shimmerAngle
+                // Apply attributes to ShimmerFrameLayout
+                with(shimmerFrameLayout) {
+                    setShimmerColor(shimmerColor)
+                    duration = shimmerDuration.toLong()
+                    angle = shimmerAngle
+                    setShimmerAnimationDuration(shimmerDuration.toLong())
+                }
             } finally {
                 typedArray.recycle()
             }
         }
     }
 
+    /**
+     * Start the shimmer animation
+     */
     fun startShimmer() {
         isVisible = true
         shimmerFrameLayout.startShimmer()
     }
 
+    /**
+     * Stop the shimmer animation
+     */
     fun stopShimmer() {
         shimmerFrameLayout.stopShimmer()
         isVisible = false
@@ -69,19 +79,30 @@ class ShimmerLayout @JvmOverloads constructor(
         super.onDetachedFromWindow()
     }
 
-    // Expose shimmer customization methods
+    /**
+     * Set the shimmer color
+     */
     fun setShimmerColor(color: Int) {
-        shimmerFrameLayout.setHighlightColor(color)
+        shimmerFrameLayout.setShimmerColor(color)
     }
 
+    /**
+     * Set the shimmer animation duration
+     */
     fun setShimmerDuration(duration: Long) {
         shimmerFrameLayout.duration = duration
     }
 
+    /**
+     * Set the shimmer angle
+     */
     fun setShimmerAngle(angle: Int) {
         shimmerFrameLayout.angle = angle
     }
 
+    /**
+     * Check if shimmer animation is currently running
+     */
     fun isShimmerStarted(): Boolean {
         return shimmerFrameLayout.isShimmerStarted
     }
