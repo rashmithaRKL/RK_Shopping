@@ -17,7 +17,7 @@
         <attr name="shimmerColor" format="color" />
         <attr name="shimmerDuration" format="integer" />
         <attr name="shimmerAngle" format="integer" />
-        <attr name="shimmerMaskWidth" format="dimension" />
+        <attr name="shimmerMaskWidth" format="float" />
         <attr name="autoStart" format="boolean" />
     </declare-styleable>
 
