@@ -32,7 +32,6 @@ android {
         }
         debug {
             isMinifyEnabled = false
-            // Removed applicationIdSuffix to match Firebase config
         }
     }
     
@@ -50,9 +49,9 @@ android {
         buildConfig = true
     }
 
-    // Ensure proper resource handling
+    // Disable automatic locale configuration
     androidResources {
-        generateLocaleConfig = true
+        generateLocaleConfig = false
         noCompress += listOf("json")
     }
 }
