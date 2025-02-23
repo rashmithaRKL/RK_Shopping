@@ -32,7 +32,7 @@ android {
         }
         debug {
             isMinifyEnabled = false
-            applicationIdSuffix = ".debug"
+            // Removed applicationIdSuffix to match Firebase config
         }
     }
     
