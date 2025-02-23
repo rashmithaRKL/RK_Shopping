@@ -48,12 +48,6 @@ android {
         buildConfig = true
     }
 
-    // Resource configuration
-    androidResources {
-        generateLocaleConfig = false
-        noCompress += listOf("json")
-    }
-
     lint {
         abortOnError = false
         checkReleaseBuilds = false
