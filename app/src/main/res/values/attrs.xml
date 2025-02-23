@@ -1,9 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Shimmer Attributes -->
     <declare-styleable name="Shimmer">
         <attr name="shimmer_highlight_color" format="color" />
         <attr name="shimmer_base_color" format="color" />
         <attr name="shimmer_duration" format="integer" />
         <attr name="shimmer_auto_start" format="boolean" />
+    </declare-styleable>
+
+    <!-- Quantity Selector Attributes -->
+    <declare-styleable name="QuantitySelector">
+        <attr name="quantitySelectorStyle" format="reference" />
+    </declare-styleable>
+
+    <!-- Product Card Attributes -->
+    <declare-styleable name="ProductCard">
+        <attr name="productCardStyle" format="reference" />
+    </declare-styleable>
+
+    <!-- Loading View Attributes -->
+    <declare-styleable name="LoadingView">
+        <attr name="loadingViewStyle" format="reference" />
+        <attr name="progressColor" format="color" />
+        <attr name="successColor" format="color" />
+        <attr name="progressStrokeWidth" format="dimension" />
+        <attr name="animationDuration" format="integer" />
     </declare-styleable>
 </resources>
