@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "123456789000",
-    "project_id": "rk-shopping",
-    "storage_bucket": "rk-shopping.appspot.com"
+    "project_number": "409102600223",
+    "project_id": "rkshopping-9b55c",
+    "storage_bucket": "rkshopping-9b55c.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:123456789000:android:1234567890abcdef",
+        "mobilesdk_app_id": "1:409102600223:android:f5c69c3967103006092d2a",
         "android_client_info": {
           "package_name": "com.example.rk_shop"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDummyKeyForBuildPurposes123456789"
+          "current_key": "AIzaSyBitlL-97364fsBZmGEFHsb-3zZNmrkDiw"
         }
       ],
       "services": {
@@ -24,5 +24,6 @@
         }
       }
     }
-  ]
+  ],
+  "configuration_version": "1"
 }
