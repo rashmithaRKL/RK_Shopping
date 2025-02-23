@@ -33,19 +33,19 @@ class ShimmerLayout @JvmOverloads constructor(
                 // Apply custom shimmer attributes
                 val shimmerColor = typedArray.getColor(
                     R.styleable.ShimmerLayout_shimmerColor,
-                    shimmerFrameLayout.getShimmerColor()
+                    shimmerFrameLayout.highlightColor
                 )
                 val shimmerDuration = typedArray.getInteger(
                     R.styleable.ShimmerLayout_shimmerDuration,
-                    shimmerFrameLayout.shimmerDuration.toInt()
+                    shimmerFrameLayout.duration.toInt()
                 )
                 val shimmerAngle = typedArray.getInteger(
                     R.styleable.ShimmerLayout_shimmerAngle,
-                    shimmerFrameLayout.shimmerAngle.toInt()
+                    shimmerFrameLayout.angle
                 )
 
                 // Apply the attributes to the ShimmerFrameLayout
-                shimmerFrameLayout.setShimmerColor(shimmerColor)
+                shimmerFrameLayout.setHighlightColor(shimmerColor)
                 shimmerFrameLayout.duration = shimmerDuration.toLong()
                 shimmerFrameLayout.angle = shimmerAngle
             } finally {
@@ -71,7 +71,7 @@ class ShimmerLayout @JvmOverloads constructor(
 
     // Expose shimmer customization methods
     fun setShimmerColor(color: Int) {
-        shimmerFrameLayout.setShimmerColor(color)
+        shimmerFrameLayout.setHighlightColor(color)
     }
 
     fun setShimmerDuration(duration: Long) {
