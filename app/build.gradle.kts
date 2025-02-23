@@ -17,6 +17,9 @@ android {
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Enable resource namespacing
+        resourceConfigurations += listOf("en")
     }
 
     buildTypes {
@@ -51,6 +54,14 @@ android {
     lint {
         abortOnError = false
         checkReleaseBuilds = false
+    }
+
+    // Resource handling
+    androidResources {
+        generateLocaleConfig = false
+        noCompress += listOf("json")
+        // Disable AAPT namespacing
+        namespaced = false
     }
 
     packaging {
