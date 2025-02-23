@@ -91,6 +91,8 @@ android {
 
 configurations.all {
     resolutionStrategy {
+        force("androidx.core:core-ktx:1.12.0")
+        force("androidx.appcompat:appcompat:1.6.1")
         force("com.facebook.shimmer:shimmer:0.5.0")
         eachDependency {
             if (requested.group == "com.android.support") {
@@ -160,6 +162,8 @@ dependencies {
     implementation("com.facebook.shimmer:shimmer:0.5.0") {
         exclude(group = "com.android.support", module = "support-annotations")
         exclude(group = "com.android.support", module = "support-v4")
+        exclude(group = "com.android.support", module = "support-compat")
+        exclude(group = "com.android.support", module = "support-core-utils")
     }
 
     // Lottie Animation
