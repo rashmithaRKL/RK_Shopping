@@ -1,0 +1,28 @@
+{
+  "project_info": {
+    "project_number": "409102600223",
+    "project_id": "rkshopping-9b55c",
+    "storage_bucket": "rkshopping-9b55c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:409102600223:android:f5c69c3967103006092d2a",
+        "android_client_info": {
+          "package_name": "com.example.rk_shop"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7BAbUC6UzJ1ByjIeNpm06rbaun3ZaD78"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Shimmer Attributes -->
-    <declare-styleable name="Shimmer">
+    <declare-styleable name="ShimmerLayout">
         <attr name="shimmer_highlight_color" format="color" />
         <attr name="shimmer_base_color" format="color" />
         <attr name="shimmer_duration" format="integer" />
@@ -9,12 +9,14 @@
         <attr name="shimmerColor" format="color" />
         <attr name="shimmerDuration" format="integer" />
         <attr name="shimmerAngle" format="integer" />
+        <attr name="shimmerMaskWidth" format="dimension" />
+        <attr name="autoStart" format="boolean" />
     </declare-styleable>
 
     <!-- Quantity Selector Attributes -->
     <declare-styleable name="QuantitySelector">
         <attr name="quantitySelectorStyle" format="reference" />
-        <attr name="quantitySelectorBackground" format="color" />
+        <attr name="quantitySelectorBackground" format="color|reference" />
         <attr name="quantitySelectorTextColor" format="color" />
         <attr name="quantitySelectorButtonTint" format="color" />
         <attr name="quantitySelectorStrokeColor" format="color" />
@@ -39,5 +41,15 @@
     <!-- Product Card Attributes -->
     <declare-styleable name="ProductCard">
         <attr name="productCardStyle" format="reference" />
+    </declare-styleable>
+
+    <!-- Custom Loading View Attributes -->
+    <declare-styleable name="CustomLoadingView">
+        <attr name="loadingColor" format="color" />
+        <attr name="loadingBackgroundColor" format="color" />
+        <attr name="loadingAlpha" format="float" />
+        <attr name="successScale" format="float" />
+        <attr name="animateToCircle" format="boolean" />
+        <attr name="showSuccessState" format="boolean" />
     </declare-styleable>
 </resources>
