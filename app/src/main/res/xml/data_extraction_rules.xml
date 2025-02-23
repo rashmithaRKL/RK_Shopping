@@ -2,12 +2,14 @@
 <data-extraction-rules>
     <cloud-backup>
         <exclude domain="root" path="."/>
-        <exclude domain="file" path="temp_files"/>
+        <exclude domain="file" path="temp_photos"/>
         <exclude domain="database" path="temp.db"/>
+        <exclude domain="sharedpref" path="device.xml"/>
     </cloud-backup>
     <device-transfer>
         <exclude domain="root" path="."/>
-        <exclude domain="file" path="temp_files"/>
+        <exclude domain="file" path="temp_photos"/>
         <exclude domain="database" path="temp.db"/>
+        <exclude domain="sharedpref" path="device.xml"/>
     </device-transfer>
 </data-extraction-rules>
