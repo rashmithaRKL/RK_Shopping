@@ -79,8 +79,13 @@ dependencies {
     implementation("com.google.firebase:firebase-messaging-ktx")
 
     // MySQL
-    implementation("mysql:mysql-connector-java:8.0.33")
+    implementation("mysql:mysql-connector-java:8.0.33") {
+        exclude(group = "com.google.protobuf", module = "protobuf-java")
+    }
     implementation("org.jetbrains.exposed:exposed-core:0.41.1")
+    
+    // Explicitly declare protobuf-lite version
+    implementation("com.google.protobuf:protobuf-javalite:3.21.7")
     implementation("org.jetbrains.exposed:exposed-dao:0.41.1")
     implementation("org.jetbrains.exposed:exposed-jdbc:0.41.1")
 
