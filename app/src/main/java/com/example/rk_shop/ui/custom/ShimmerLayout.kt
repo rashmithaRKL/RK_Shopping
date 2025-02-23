@@ -47,10 +47,8 @@ class ShimmerLayout @JvmOverloads constructor(
 
                 // Apply attributes to ShimmerFrameLayout
                 with(shimmerFrameLayout) {
-                    setShimmerColor(shimmerColor)
-                    duration = shimmerDuration.toLong()
-                    angle = shimmerAngle
-                    setShimmerAnimationDuration(shimmerDuration.toLong())
+                    // Note: Shimmer 0.1.0 has a simpler API
+                    // Just start/stop functionality is available
                 }
             } finally {
                 typedArray.recycle()
@@ -63,47 +61,26 @@ class ShimmerLayout @JvmOverloads constructor(
      */
     fun startShimmer() {
         isVisible = true
-        shimmerFrameLayout.startShimmer()
+        shimmerFrameLayout.startShimmerAnimation()
     }
 
     /**
      * Stop the shimmer animation
      */
     fun stopShimmer() {
-        shimmerFrameLayout.stopShimmer()
+        shimmerFrameLayout.stopShimmerAnimation()
         isVisible = false
     }
 
     override fun onDetachedFromWindow() {
-        shimmerFrameLayout.stopShimmer()
+        shimmerFrameLayout.stopShimmerAnimation()
         super.onDetachedFromWindow()
-    }
-
-    /**
-     * Set the shimmer color
-     */
-    fun setShimmerColor(color: Int) {
-        shimmerFrameLayout.setShimmerColor(color)
-    }
-
-    /**
-     * Set the shimmer animation duration
-     */
-    fun setShimmerDuration(duration: Long) {
-        shimmerFrameLayout.duration = duration
-    }
-
-    /**
-     * Set the shimmer angle
-     */
-    fun setShimmerAngle(angle: Int) {
-        shimmerFrameLayout.angle = angle
     }
 
     /**
      * Check if shimmer animation is currently running
      */
     fun isShimmerStarted(): Boolean {
-        return shimmerFrameLayout.isShimmerStarted
+        return shimmerFrameLayout.isAnimationStarted
     }
 }
