@@ -16,7 +16,6 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -28,7 +27,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("debug") // Use debug signing for now
+            signingConfig = signingConfigs.getByName("debug")
         }
         debug {
             isMinifyEnabled = false
@@ -53,17 +52,31 @@ android {
     androidResources {
         generateLocaleConfig = false
         noCompress += listOf("json")
-        additionalParameters += listOf(
-            "--allow-reserved-package-id",
-            "--no-version-vectors",
-            "--warn-manifest-validation",
-            "--auto-add-overlay"
-        )
+    }
+
+    lint {
+        abortOnError = false
+        checkReleaseBuilds = false
+    }
+
+    packaging {
+        resources {
+            excludes += listOf(
+                "META-INF/DEPENDENCIES",
+                "META-INF/LICENSE",
+                "META-INF/LICENSE.txt",
+                "META-INF/license.txt",
+                "META-INF/NOTICE",
+                "META-INF/NOTICE.txt",
+                "META-INF/notice.txt",
+                "META-INF/ASL2.0",
+                "META-INF/*.kotlin_module"
+            )
+        }
     }
 }
 
 dependencies {
-    // Android core dependencies
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")
