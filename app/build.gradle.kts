@@ -17,9 +17,6 @@ android {
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-        
-        // Resource configurations
-        resourceConfigurations += listOf("en")
     }
 
     buildTypes {
@@ -54,19 +51,25 @@ android {
     lint {
         abortOnError = false
         checkReleaseBuilds = false
-        disable += listOf("ResourceType")
+        disable += listOf("ResourceType", "Instantiatable")
     }
 
     // Resource configuration
     androidResources {
-        additionalParameters += listOf("--warn-manifest-validation")
-        noCompress += listOf("json")
         generateLocaleConfig = false
+        noCompress += listOf("json")
     }
 
     // Disable resource namespacing
-    android.nonTransitiveRClass = true
-    android.nonFinalResIds = false
+    aaptOptions {
+        namespaced = false
+        noCompress += listOf("json")
+        additionalParameters += listOf(
+            "--no-version-vectors",
+            "--no-version-transitions",
+            "--auto-add-overlay"
+        )
+    }
 
     packaging {
         resources {
@@ -143,7 +146,9 @@ dependencies {
     kapt("com.github.bumptech.glide:compiler:4.16.0")
 
     // Shimmer Effect
-    implementation("com.facebook.shimmer:shimmer:0.5.0")
+    implementation("com.facebook.shimmer:shimmer:0.5.0") {
+        exclude(group = "com.android.support", module = "support-annotations")
+    }
 
     // Lottie Animation
     implementation("com.airbnb.android:lottie:6.3.0")
