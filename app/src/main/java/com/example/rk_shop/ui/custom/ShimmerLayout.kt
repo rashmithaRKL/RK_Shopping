@@ -19,6 +19,39 @@ class ShimmerLayout @JvmOverloads constructor(
     init {
         val view = LayoutInflater.from(context).inflate(R.layout.layout_shimmer, this, true)
         shimmerFrameLayout = view.findViewById(R.id.shimmerFrameLayout)
+
+        // Apply custom attributes if provided
+        attrs?.let {
+            val typedArray = context.obtainStyledAttributes(
+                attrs,
+                R.styleable.ShimmerLayout,
+                defStyleAttr,
+                0
+            )
+
+            try {
+                // Apply custom shimmer attributes
+                val shimmerColor = typedArray.getColor(
+                    R.styleable.ShimmerLayout_shimmerColor,
+                    shimmerFrameLayout.getShimmerColor()
+                )
+                val shimmerDuration = typedArray.getInteger(
+                    R.styleable.ShimmerLayout_shimmerDuration,
+                    shimmerFrameLayout.shimmerDuration.toInt()
+                )
+                val shimmerAngle = typedArray.getInteger(
+                    R.styleable.ShimmerLayout_shimmerAngle,
+                    shimmerFrameLayout.shimmerAngle.toInt()
+                )
+
+                // Apply the attributes to the ShimmerFrameLayout
+                shimmerFrameLayout.setShimmerColor(shimmerColor)
+                shimmerFrameLayout.duration = shimmerDuration.toLong()
+                shimmerFrameLayout.angle = shimmerAngle
+            } finally {
+                typedArray.recycle()
+            }
+        }
     }
 
     fun startShimmer() {
@@ -34,5 +67,22 @@ class ShimmerLayout @JvmOverloads constructor(
     override fun onDetachedFromWindow() {
         shimmerFrameLayout.stopShimmer()
         super.onDetachedFromWindow()
+    }
+
+    // Expose shimmer customization methods
+    fun setShimmerColor(color: Int) {
+        shimmerFrameLayout.setShimmerColor(color)
+    }
+
+    fun setShimmerDuration(duration: Long) {
+        shimmerFrameLayout.duration = duration
+    }
+
+    fun setShimmerAngle(angle: Int) {
+        shimmerFrameLayout.angle = angle
+    }
+
+    fun isShimmerStarted(): Boolean {
+        return shimmerFrameLayout.isShimmerStarted
     }
 }

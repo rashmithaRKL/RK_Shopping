@@ -49,10 +49,16 @@ android {
         buildConfig = true
     }
 
-    // Disable automatic locale configuration
+    // Resource configuration
     androidResources {
         generateLocaleConfig = false
         noCompress += listOf("json")
+        additionalParameters += listOf(
+            "--allow-reserved-package-id",
+            "--no-version-vectors",
+            "--warn-manifest-validation",
+            "--auto-add-overlay"
+        )
     }
 }
 

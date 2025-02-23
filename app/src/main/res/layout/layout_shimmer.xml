@@ -7,7 +7,11 @@
     app:shimmer_auto_start="true"
     app:shimmer_base_color="#EBEBEB"
     app:shimmer_highlight_color="#FFFFFF"
-    app:shimmer_duration="1000">
+    app:shimmer_duration="1000"
+    app:shimmer_repeat_mode="restart"
+    app:shimmer_direction="left_to_right"
+    app:shimmer_intensity="0.3"
+    app:shimmer_mask_width="0.5">
 
     <LinearLayout
         android:layout_width="match_parent"
