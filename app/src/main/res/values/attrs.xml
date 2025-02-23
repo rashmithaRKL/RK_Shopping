@@ -45,11 +45,18 @@
 
     <!-- Custom Loading View Attributes -->
     <declare-styleable name="CustomLoadingView">
-        <attr name="loadingColor" format="color" />
-        <attr name="loadingBackgroundColor" format="color" />
-        <attr name="loadingAlpha" format="float" />
-        <attr name="successScale" format="float" />
-        <attr name="animateToCircle" format="boolean" />
-        <attr name="showSuccessState" format="boolean" />
+        <attr name="progressColor" format="color" />
+        <attr name="successColor" format="color" />
+        <attr name="progressStrokeWidth" format="dimension" />
+        <attr name="animationDuration" format="integer" />
     </declare-styleable>
+
+    <!-- Custom Styles -->
+    <attr name="quantitySelectorStyle" format="reference" />
+    <attr name="productCardStyle" format="reference" />
+    <attr name="loadingViewStyle" format="reference" />
+    <attr name="progressColor" format="color" />
+    <attr name="successColor" format="color" />
+    <attr name="progressStrokeWidth" format="dimension" />
+    <attr name="animationDuration" format="integer" />
 </resources>

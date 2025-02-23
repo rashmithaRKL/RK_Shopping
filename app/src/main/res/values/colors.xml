@@ -16,4 +16,9 @@
     <color name="price_regular">#212121</color>
     <color name="shimmer_placeholder_color">#DDDDDD</color>
     <color name="success">#4CAF50</color>
+
+    <!-- Custom Colors -->
+    <color name="progress_color">#2196F3</color>
+    <color name="loading_color">#E0E0E0</color>
+    <color name="loading_background_color">#FFFFFF</color>
 </resources>
