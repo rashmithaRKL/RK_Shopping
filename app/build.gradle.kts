@@ -41,6 +41,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true  // Added to address deprecation warning
     }
 }
 
@@ -71,22 +72,18 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
 
     // Firebase
-    implementation(platform("com.google.firebase:firebase-bom:33.9.0"))
+    implementation(platform("com.google.firebase:firebase-bom:32.3.1"))
     implementation("com.google.firebase:firebase-analytics-ktx")
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-firestore-ktx")
     implementation("com.google.firebase:firebase-storage-ktx")
     implementation("com.google.firebase:firebase-messaging-ktx")
-    implementation("com.google.firebase:firebase-analytics")
 
     // MySQL
     implementation("mysql:mysql-connector-java:8.0.33") {
         exclude(group = "com.google.protobuf", module = "protobuf-java")
     }
     implementation("org.jetbrains.exposed:exposed-core:0.41.1")
-    
-    // Explicitly declare protobuf-lite version
-    implementation("com.google.protobuf:protobuf-javalite:3.21.7")
     implementation("org.jetbrains.exposed:exposed-dao:0.41.1")
     implementation("org.jetbrains.exposed:exposed-jdbc:0.41.1")
 
